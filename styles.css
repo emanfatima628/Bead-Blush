@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffeef8;
+  color: #4a0033;
+  background-image: url('fly.jpg')
+  
+
+}
+
+header {
+  background-color: #ff99cc;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #ffccdd;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4a0033;
+  font-weight: bold;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  color: #cc0066;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  background-color: #fff0f6;
+  border: 2px dashed #ff99cc;
+  padding: 1rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+
+.product img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+
+header, h1, h2 {
+  font-family: 'Pacifico', cursive;
+  color: #ff66cc;
+  text-shadow: 0 0 8px #fff0f8, 0 0 12px #ffccf9, 0 0 20px #ff99dd;
+  animation: glowPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 5px #fff0f5, 0 0 8px #ffccee, 0 0 15px #ff99dd;
+  }
+  to {
+    text-shadow: 0 0 12px #fff0f5, 0 0 18px #ffccee, 0 0 25px #ff66cc;
+  }
+}
+
+
+.btn {
+  background-color: #ff66a3;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ff99cc;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffcce5;
+  color: #4a0033;
+}
+
+
+.btn {
+  background: linear-gradient(135deg, #ff9acb, #ffc0df, #ffaad5);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 0 10px #ffcce6, 0 0 20px #ffe0f0 inset;
+  cursor: pointer;
+  text-shadow: 0 1px 2px #cc6699;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ffc0df, #ff9acb);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffaad5, 0 0 25px #ffe6f2 inset;
+}
+
+.glossy {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff0f5, #ff69b4);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle-fade 1s ease-out forwards;
+  box-shadow: 0 0 10px #ffb6c1;
+}
+
+@keyframes sparkle-fade {
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.5);
+  }
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px pink;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@keyframes float-sparkle {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-80px) scale(0.5); opacity: 0; }
+}
+
+.sparkle-float {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fff, #ffcce5);
+  border-radius: 50%;
+  animation: float-sparkle 3s ease-in-out infinite;
+}
+.product {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(255, 192, 203, 0.4);
+  transition: transform 0.3s ease;
+}
+.product:hover {
+  transform: scale(1.05);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 204, 221, 0.8);
+  box-shadow: 0 2px 8px rgba(255, 153, 204, 0.4);
+}
+
+
+.product img {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.product img:hover {
+  filter: brightness(1.1) saturate(1.3);
+  box-shadow: 0 0 20px #ffc0cb;
+}
+
+
+footer {
+  background: linear-gradient(90deg, #ffcce5, #fff0f5, #ffcce5);
+  font-weight: bold;
+  text-shadow: 0 1px 1px #fff;
+}
+footer a {
+  color: #cc0066;
+  text-decoration: underline;
+  font-weight: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 0 15px #a1f7c4;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: scale(1.1);
+}
+
+
